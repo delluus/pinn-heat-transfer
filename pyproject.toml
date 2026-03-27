@@ -1,0 +1,16 @@
+[project]
+name = "pinn-heat-transfer"
+version = "0.1.0"
+description = "PINN for heat transfer from the module MKM 411 from the University of Pretoria"
+readme = "README.md"
+requires-python = "==3.10.19"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.8",
+    "notebook>=7.5.5",
+    "numpy>=2.2.6",
+    "scipy>=1.15.3",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+]
