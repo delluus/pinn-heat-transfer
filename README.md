@@ -20,6 +20,33 @@ This repository contains everything you need to run the project.
 
 ---
 
+## Learning Outcomes
+
+This repository supports the SciML component of MKM411. On completing the
+associated lectures and this project component, you will be able to:
+
+- Derive and implement the PINN loss function for the 2D unsteady heat equation,
+  embedding the governing PDE, boundary conditions, and initial condition via
+  automatic differentiation
+- Train both a data-driven ANN and a PINN in PyTorch and interpret their training
+  and validation loss curves
+- Conduct systematic hyperparameter experiments — varying network depth, learning
+  rate, and loss weights — and provide physically grounded explanations for
+  observed trends
+- Benchmark PINN and ANN predictions quantitatively against FDM and exact Fourier
+  solutions across multiple material types
+- Evaluate model generalisation to an unseen material and explain, from first
+  principles, why physics-constrained learning outperforms a purely data-driven
+  approach on out-of-distribution inputs
+- Critically compare all solution paradigms — analytical, FDM, ANN, PINN, and
+  commercial CFD — across accuracy, computational cost, data requirements, and
+  interpretability
+
+For the full set of lecture learning outcomes, see the
+[lecture repository](https://github.com/muaazbhamjee/mkm411-sciml-lectures).
+
+---
+
 ## Repository Structure
 
 ```
@@ -265,6 +292,49 @@ git push
 | Training is very slow | See Hardware Requirements section above — use Google Colab for free GPU access, or reduce `EPOCHS_ADAM` to 2000 for initial experiments |
 | Notebook output not showing | Run `Kernel → Restart & Run All` |
 | Git merge conflict in notebook | Each group member should work on a personal branch and merge via pull request |
+
+---
+
+## Citation
+
+If you use this repository in your research or teaching, please cite it using the
+reference in `CITATION.cff` or the following:
+
+> Bhamjee, M., & Craig, K.J. (2025). *MKM411 PINN Heat Transfer — Physics-Informed
+> Neural Networks for Unsteady Heat Transfer* [Software]. University of Pretoria.
+> https://github.com/muaazbhamjee/pinn-heat-transfer
+
+This work is grounded in the following seminal papers:
+
+> Raissi, M., Perdikaris, P., & Karniadakis, G.E. (2019). Physics-informed neural
+> networks: A deep learning framework for solving forward and inverse problems
+> involving nonlinear PDEs. *Journal of Computational Physics*, 378, 686–707.
+> https://doi.org/10.1016/j.jcp.2018.10.045
+
+> Raissi, M., Yazdani, A., & Karniadakis, G.E. (2020). Hidden fluid mechanics:
+> Learning velocity and pressure fields from flow visualizations. *Science*,
+> 367(6481), 1026–1030. https://doi.org/10.1126/science.aaw4741
+
+---
+
+## Attribution:
+
+During development, the following AI-assisted tools were used:
+
+* Claude AI (Anthropic):
+  * debugging 
+  * architecture decisions
+  * physics implementation guidance
+  * code generation and review
+  * documentation
+
+All research questions, pedagogical design decisions, theoretical contributions, and experimental results are the authors' own. 
+
+---
+
+## Licence
+
+Released under the [GNU General Public Licence v3.0](LICENSE) — you are free to use, modify, and redistribute it under the same licence terms.
 
 ---
 
